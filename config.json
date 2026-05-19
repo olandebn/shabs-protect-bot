@@ -1,0 +1,82 @@
+{
+  "_commentaire": "Modifiez ces valeurs selon les besoins de votre serveur",
+
+  "antiRaid": {
+    "enabled": true,
+    "_commentaire_seuil": "Si X membres rejoignent en moins de Y secondes → lockdown",
+    "joinThreshold": 8,
+    "joinIntervalMs": 10000,
+    "_commentaire_age": "Compte créé il y a moins de X jours → kick automatique",
+    "minAccountAgeDays": 3,
+    "_commentaire_action": "Options : 'kick' ou 'ban'",
+    "newJoinAction": "kick",
+    "_commentaire_lockdown": "Durée du lockdown en ms (5 min par défaut)",
+    "lockdownDurationMs": 300000
+  },
+
+  "antiSpam": {
+    "enabled": true,
+    "_commentaire_msg": "X messages en moins de Y ms → action",
+    "messageThreshold": 5,
+    "messageIntervalMs": 4000,
+    "_commentaire_dup": "X messages identiques consécutifs → action",
+    "duplicateThreshold": 3,
+    "_commentaire_action": "Options : 'warn', 'mute', 'kick', 'ban'",
+    "spamAction": "mute",
+    "_commentaire_mute": "Durée du mute en ms (10 min par défaut)",
+    "muteDurationMs": 600000,
+    "_commentaire_warn": "Nombre d'avertissements avant le mute",
+    "warnBeforeMute": 2
+  },
+
+  "verification": {
+    "enabled": true,
+    "_commentaire": "Emoji avec lequel le membre doit réagir pour être vérifié",
+    "reactionEmoji": "✅",
+    "_commentaire_msg": "Message affiché dans le salon de vérification",
+    "welcomeMessage": "Bienvenue sur **Tanières des SHABS** ! 🐾\n\nPour accéder au serveur, réagis avec ✅ à ce message.\n\n_En rejoignant, tu acceptes les règles du serveur._",
+    "_commentaire_dm": "Envoyer un DM au membre après vérification ?",
+    "sendWelcomeDm": true,
+    "welcomeDmMessage": "Tu es maintenant vérifié sur **Tanières des SHABS** ! Bienvenue et amuse-toi bien 🎉"
+  },
+
+  "autoMod": {
+    "enabled": true,
+
+    "badWords": {
+      "enabled": true,
+      "_commentaire": "Ajoutez ici les mots interdits sur votre serveur",
+      "words": ["insulte1", "insulte2", "insulte3"],
+      "_commentaire_action": "Options : 'delete', 'warn', 'mute'",
+      "action": "warn"
+    },
+
+    "linkFilter": {
+      "enabled": false,
+      "_commentaire": "Autoriser UNIQUEMENT ces domaines (liste blanche)",
+      "allowedDomains": ["discord.gg", "discord.com", "youtube.com", "twitch.tv", "imgur.com"],
+      "action": "delete"
+    },
+
+    "mentionSpam": {
+      "enabled": true,
+      "_commentaire": "Nombre max de mentions par message",
+      "maxMentionsPerMessage": 5,
+      "action": "warn"
+    },
+
+    "capsSpam": {
+      "enabled": true,
+      "_commentaire": "Si X% du message est en majuscules (et que le message fait plus de Y caractères)",
+      "maxCapsPercent": 75,
+      "minMessageLength": 12,
+      "action": "warn"
+    },
+
+    "inviteLinks": {
+      "enabled": true,
+      "_commentaire": "Bloquer les liens d'invitation Discord externes au serveur",
+      "action": "delete"
+    }
+  }
+}
