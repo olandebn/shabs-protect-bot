@@ -609,3 +609,8 @@ process.on('unhandledRejection', err => console.error('[Unhandled Rejection]', e
 //  CONNEXION DU BOT
 // ============================================================
 client.login(process.env.BOT_TOKEN);
+
+
+// ── Keep-alive pour Render.com (plan gratuit) ──
+const http = require('http');
+http.createServer((req, res) => res.end('SHABS Bot is running!')).listen(process.env.PORT || 3000);
