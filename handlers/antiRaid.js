@@ -9,7 +9,7 @@ const config = require('../config.json');
 const recentJoins = new Map();
 const lockdownState = new Map();
 
-ansync function handleNewMember(member, sendLog) {
+async function handleNewMember(member, sendLog) {
   const { guild } = member;
   const cfg = config.antiRaid;
   if (!cfg.enabled) return;
